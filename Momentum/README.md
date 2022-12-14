@@ -33,3 +33,15 @@
   - 이미지 파일명을 배열의 요소로 저장
   - 이미지 태그 생성, 이미지 경로를 불러 body태그의 맨뒤에 붙이도록 구현
   - 랜덤표시는 quotes와 똑같이 구현
+
+## 4. todo-list 추가하기
+
+1) html: form id = "todo-form" 추가
+2) html: ul id = "todo-list" 추가
+3) todo.js 추가
+  - input박스에 값을 입력하고 submit
+  - submit할 때 동작할 handleToDoSubmit 함수 : vaule를 어떻게 담고 저장할지
+  - input의 value를 표시하는 paintToDo 함수 : 리스트안에 텍스트, 삭제버튼 포함
+  - X 버튼을 누르면 삭제하는 deleteToDo 함수 : li를 삭제하는데 value의 id와 같은지 검사해서 기존의 value값 남기기
+  - localStorage의 toDos를 배열의 문자형으로 만들 saveToDos 함수
+  - 만약 value가 비어있지 않으면 todos 배열에 json을 담아 요소를 반복하며 paintToDo 함수 실행
