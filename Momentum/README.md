@@ -45,3 +45,10 @@
   - X 버튼을 누르면 삭제하는 deleteToDo 함수 : li를 삭제하는데 value의 id와 같은지 검사해서 기존의 value값 남기기
   - localStorage의 toDos를 배열의 문자형으로 만들 saveToDos 함수
   - 만약 value가 비어있지 않으면 todos 배열에 json을 담아 요소를 반복하며 paintToDo 함수 실행
+
+## 5. weater api 불러오기
+
+1) html: id = "weather"인 div 추가
+2) weather.js 추가
+  - onGeoOk 함수  : 위도와 경도, api url을 저장하는 변수 / 날씨와 도시를 표시
+  - onGeoError 함수 : 위치를 부르는게 에러가 났을때 실행하는 함수
