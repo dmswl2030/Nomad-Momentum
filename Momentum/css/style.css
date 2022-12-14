@@ -1,3 +1,161 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Tenada';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-size-lg: 10vw;
+  --font-size-md: 5vw;
+  --font-size-smd: 3vw;
+  --font-size-sm: 1.5vw;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Tenada';
+}
+body > img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 1;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  letter-spacing: -5px; 
+}
+
 .hidden {
   display: none;
+}
+
+#login-form {
+  font-size: var(--font-size-smd);
+  font-weight: 300;
+  color: #ffffff;
+}
+input.underline {
+  color: #ffffff;
+  font-size: var(--font-size-smd);
+  border-left-width:0;
+  border-right-width:0;
+  border-top-width:0;
+  border-color: #ffffff;
+  background: transparent;
+}
+input.submit {
+  color: #bababa;
+  font-size: var(--font-size-smd);
+  border: none;
+  border-radius: 5px;
+  background: white;
+}
+#greeting {
+  color: #ffffff;
+  font-size: var(--font-size-md);
+}
+
+.todo {
+  padding: 5vh;
+  border-radius: 10px;
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  right: 70%;
+  top: 0%;
+  transform: translate(-20%, 0%);
+  z-index: 200;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, 0%);
+  z-index: 200;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: var(--font-size-sm);
+  position: absolute;
+  right: 0%;
+  top: 5%;
+  transform: translate(-50%, 0%);
+  z-index: 200;
 }
