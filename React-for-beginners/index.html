@@ -7,17 +7,26 @@
   <title>Document</title>
 </head>
 <body>
-  <span>Total clicks: 0</span>
-  <button id="btn">Click me</button>
-  <script>
-    let counter = 0;
-    const button = document.querySelector("button");
-    const span = document.querySelector("span")
-    function handleClick() {
-      counter = counter + 1;
-      span.innerHTML = `Total clicks: ${counter}`;
-    }
-    button.addEventListener("click", handleClick);
-  </script>
+  <div id="root"></div>
 </body>
+<!-- react js: 어플리케이션이 interective하도록 만들어주는 library -->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<!-- react-dom: React element를 HTML에 두는 역할 -->
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script>
+  const root = document.querySelector("#root")
+
+  const h3 = React.createElement("h3", //html 태그
+    {onMouseEnter: () => console.log('mouse enter'),
+    id: "title"}, //property
+    "Hello, i am a span"); //들어갈 내용
+
+  const btn = React.createElement("button",
+    {onClick: () => console.log('im clicked')},
+    "Click me");
+
+  const container = React.createElement("div", null, [h3, btn])
+  ReactDOM.render(container, root); // render: React element를 가지고 HTML로 만들어 배치 (root안에 container를 배치)
+  
+</script>
 </html>
