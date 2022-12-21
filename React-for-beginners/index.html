@@ -16,20 +16,18 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     const root = document.querySelector("#root");
-    let counter = 0;
-    function countUp() {
-      counter = counter + 1;
-      render(); //count할때마다 rerendering 해야하기 때문에 함수에 포함시킨다
+    function App() {
+      const [counter, setCounter] = React.useState(0); //coutner: 우리가 담으려는 data값, setCounter: data값을 바꿀 때 사용
+      const onClick = () => {
+        setCounter((counter) => counter + 1); //정확한 현재 값을 받을 수 있도록 수정
+      };
+      return (
+        <div>
+          <h3>Total clicks: {counter}</h3>
+          <button onClick={onClick}>Click me</button>
+        </div>
+      );
     }
-    function render() {
-      ReactDOM.render(<Container />, root);
-    }
-    const Container = () => (
-      <div>
-        <h3>Total clicks: {counter}</h3>
-        <button onClick={countUp}>Click me</button>
-      </div>
-    );
-    render();
+    ReactDOM.render(<App />, root);
   </script>
 </html>
