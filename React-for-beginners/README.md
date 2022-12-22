@@ -27,3 +27,15 @@
 - 배열 요소를 꺼내서 변수명 지어주기 (구조분해 할당)
 - 컴포넌트에서 클릭함수를 호출하면 새로운 데이터를 담아 자동으로 리렌더링 한다
 - modifire 함수를 가지고 state를 변경할 때 컴포넌트가 재생성됨
+
+## 5. converter 만들기
+
+- useState 활용해서 현재 input의 value를 담아 업데이트 해준다
+- 바뀌는 value 부분만 리렌더링 되는중
+- Flip버튼으로 한쪽에서만 입력받도록 제어하기 (누르는 동시에 reset)
+- 삼항연산자 활용해서 만약 flipped가 true이면 (Hours가 활성화 되어있다면) Minutes은 disable되고 변환 공식을 적어준다
+- 리렌더링 조건
+  1. props이 바뀔때
+  2. state가 바뀔때
+  3. 부모 컴포넌트가 리렌더링 될 때
+- App는 컨버터를 select하는 함수 : useState의 index를 활용
