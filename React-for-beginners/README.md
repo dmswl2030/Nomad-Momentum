@@ -39,3 +39,11 @@
   2. state가 바뀔때
   3. 부모 컴포넌트가 리렌더링 될 때
 - App는 컨버터를 select하는 함수 : useState의 index를 활용
+
+## 6. props, memo, props types
+
+- props = 부모 컴포넌트로부터 자식 컴포넌트에게 데이터를 전송하는 방식
+- 부모에 props를 사용하면 자식 컴포넌트(함수)의 인자로 객체가 들어가게 됨
+- 하나의 버튼을 만들어서 props를 이용해 버튼의 스타일을 관리해서 재사용 할 수 있게됨.
+- memo = props가 변경되지 않는 선에서 불필요한 부분이 rerender 되지 않도록 해줌
+- proptype = 어떤타입의 prop을 받고있는지 체크해줌
