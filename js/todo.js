@@ -17,6 +17,7 @@ function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
   toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); //클릭한 li.id와 다른 toDo는 남겨두고 싶다
+  saveToDos();
 }
 
 //3. input의 value를 표시하는 리스트 함수
@@ -27,7 +28,7 @@ function paintToDo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  button.innerHTML = "❌";
   button.addEventListener("click", deleteToDo);
   li.appendChild(span); //li는 span이라는 자식을 가진다
   li.appendChild(button); //li는 button이라는 자식을 가진다

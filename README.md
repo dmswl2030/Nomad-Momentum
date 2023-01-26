@@ -62,8 +62,22 @@
 5) 명언, 저자는 수직 하단정렬
 6) 폰트 크기 모듈화, 색상 통일
 
-## 리팩토링 예정
-1) 이름 입력 시 문장이 fade out / hello name이 fade in 되도록
-2) todo-list가 많아졋을때 스크롤 되도록
-3) 날씨에 맞는 아이콘 추가해보기
-4) AM, PM 추가하여 24시 기준이 아닌 12시간 기준으로 리팩토링 (오후 7시 > 19시 x)
+## 리팩토링 230126 완료
+1) 이름 입력 시 문장이 fade out / hello name이 fade in 되도록 수정 ✅
+2) todo-list가 많아졋을때 스크롤 되도록 수정 ✅
+3) 날씨에 맞는 아이콘 추가해보기 ✅ 
+4) AM, PM 추가하여 24시 기준이 아닌 12시간 기준으로 리팩토링 (오후 7시 > 19시 x) ✅
+5) 오류 : 로컬 스토리지에서 todo-list목록 사라지지 않아 새로고침해도 남아있음 ✅
+6) 배경이 밝으면 폰트가 흰색일때 잘 안보여서 테두리 스타일 추가 ✅
+
+## 참고한 자료
+<details>
+  <summary>날씨 아이콘 추가</summary>
+  참고 : https://velog.io/@duckgus/Openweathermap.api-%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%B4-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%97%90-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EB%82%A0%EC%94%A8-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%84%A3%EA%B8%B0
+</details>
+
+<details>
+    <summary>시간을 am, pm로 표시</summary>
+    참고 : https://velog.io/@duckgus/Openweathermap.api-%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%B4-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%97%90-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EB%82%A0%EC%94%A8-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%84%A3%EA%B8%B0
+</details>
+

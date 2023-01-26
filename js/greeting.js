@@ -4,13 +4,16 @@ const greeting = document.querySelector("#greeting");
 
 //string 문자열을 담아두는 변수는 대문자로 변수를 적는것이 일반적이다
 const HIDDEN_CLASSNAME = "hidden";
+const HIDDEN_FADEIN = "hidden_fadein"
+const HIDDEN_FADEOUT = "hidden_fadeout"
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
   event.preventDefault();
 
   //loginForm에 hidden 클래스 추가
-  loginForm.classList.add(HIDDEN_CLASSNAME);
+  // loginForm.classList.add(HIDDEN_CLASSNAME);
+  loginForm.classList.add(HIDDEN_FADEOUT);
   const username = loginInput.value;
   //localStorage에 username 저장 후 paintGreetings 함수 실행
   localStorage.setItem(USERNAME_KEY, username);
@@ -20,6 +23,7 @@ function onLoginSubmit(event) {
 function paintGreetings(username) {
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.classList.add(HIDDEN_FADEIN);
 }
 
 //username을 받아오는지 유무 판단
