@@ -16,7 +16,7 @@ function saveToDos() {
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
-  toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); //클릭한 li.id와 다른 toDo는 남겨두고 싶다
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id)); //클릭한 li.id와 다른 toDo는 남겨두고 싶다
   saveToDos();
 }
 
@@ -55,7 +55,8 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 //6. 로컬 스토리지의 value를 변수에 담아
 const savedToDos = localStorage.getItem(TODOS_KEY);
-if (savedToDos !== null) { //value가 비어있지 않으면
+if (savedToDos !== null) {
+  //value가 비어있지 않으면
   const parsedToDos = JSON.parse(savedToDos); //json으로 반환한 문자열을 변수에 담음
   toDos = parsedToDos; //todos 배열에 json을 담아서 업데이트
   parsedToDos.forEach(paintToDo); //json의 요소를 돌면서 paintToDo함수 실행
